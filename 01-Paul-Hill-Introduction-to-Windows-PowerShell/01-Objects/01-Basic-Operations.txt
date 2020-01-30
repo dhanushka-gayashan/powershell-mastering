@@ -1,0 +1,25 @@
+> Get Process/Service
+    - Get-Process -Name iexporar
+    - Get-Service -Name <service_name>
+
+> Kill a Process
+    - (Get-Process <Process_Name>).kill()
+    - (Get-Process notepad).kill()
+
+> Copy Files
+    - (Get-ChildItem <source_file_path>).CopyTo("destination_file_path")
+
+> Get Creation Time of PowerShell file 
+    - (Get-ChildItem $PSHOME\powershell.exe).CreationTime
+
+> Get Properties
+    - Get-EventLog -LogName Security -Newest 6 | Select-Object source, timewritten, machinename, message    
+
+> Get TimeZone
+    - Get-Command *timezong*
+    - Get-TimeZone | Get-Member
+    - (Get-TimeZone).DaylightName
+
+> Get BIOS Version
+    - Get-WmiObject win32_bios | gm
+    - (Get-WmiObject win32_bios).biosversion    

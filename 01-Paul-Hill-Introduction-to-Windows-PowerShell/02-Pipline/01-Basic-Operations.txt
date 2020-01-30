@@ -1,0 +1,24 @@
+> Delete Files and Directory
+    - Get-ChildItem c:\Company\*.txt -Recurse | Remove_Item -WhatIf
+    - Get-ChildItem c:\Company\*.txt -Recurse | Remove_Item -confirm
+
+>  Write to file 
+    - Get-EventLog -LogName Security | Out-File C:\test.txt
+
+> See Content of a file
+    - Get-Content -Path <path-to-file>    
+
+> Stop Services
+    - Get-Service -Name bita | gm
+    - Get-Service -Name bita | stop Service -PassThru  (PassThru for display output)
+
+> Import new Alias
+    - Create CSV
+        - Name, Value
+        - L, Eventlog 
+        - List, Get-ChildItem
+        - P, ping
+        - W, Winver
+    - Import-csv <csv_file_path> | new-alias -verbose
+
+>     

@@ -1,0 +1,63 @@
+> For - loop
+    for ($i = 0; $1 -lt 5; $i++) {
+        echo "Im in a loop"    
+    }
+
+> Iterate though Array
+    $MyArray = @("Cars", "Trucks", "SUVs", "4x4")
+    for ($i = 0; $i -lt $MyArray.Count; $i++) {
+        echo ("Element $i value: " + $MyArray[$i])
+    }    
+
+> While - loop
+    $i = 0
+    while($i -lt 5) {
+        $i 
+        $i++
+    }
+
+    while((Read-Host "Type 'exit' to exit") -ne "exit") {
+        echo "Waiting to exit....."
+    }
+
+    while($userInput -ne "exit") {
+        $userInput = Read-Host "Please type 'exit' to stop..."
+    }
+    $userInput = $null #remove cache values
+
+>  Do - Loop 
+    $i = 0
+    do {
+        echo "Value of i = $i"
+        $i++ 
+    } while ($i -lt 5)    
+
+    $i = 0
+    do {
+        echo "Value of i = $i"
+        $i++ 
+    } until ($i -eq 5)
+
+> ForEach - Loop 
+    $Vehicles = @("Cars", "SUVs", "Trucks", "Buses")
+    foreach ($Elm in $Vehicles) {
+        $Elm
+    }    
+
+> Loop - Break
+    $Vehicles = @("Cars", "SUVs", "Trucks", "Buses")
+    foreach ($Elm in $Vehicles) {
+        if ($Elm -eq "Trucks") {
+            break
+        }
+        $Elm
+    }
+
+> Loop - Continue
+    $Vehicles = @("Cars", "SUVs", "Trucks", "Buses")
+    foreach ($Elm in $Vehicles) {
+        if ($Elm -eq "Trucks") {
+            continue
+        }
+        $Elm
+    }

@@ -1,0 +1,26 @@
+> Define an Array
+    - $MyArray = @("Jack", "Rose", "Moody")
+
+> Access Element
+    - $MyArray[0]
+    - $MyArray[1]
+
+>  Declare Empty Array
+    - $MyArray = @()  
+
+> Add Elements to Empty Array   
+    - $MyArray += "Apple"
+    - $MyArray += @("Orange", "Banana")
+
+> Sort Array    
+    - $Alphabet = @("c", "e", "a", "d", "b")
+    - $Alphabet | Sort -Descending 
+    - $Alphabet = $Alphabet | Sort -Descending   
+
+>  Remove Element
+    - $MyArray | where {$_ -ne "Jack"}   
+    - $MyArray =  $MyArray | where {$_ -ne "Jack"} 
+    - $MyArray =  $MyArray | where {$_ -ne $MyArray[0]}     
+
+> Delete a Array    
+    - $MyArray = $null    

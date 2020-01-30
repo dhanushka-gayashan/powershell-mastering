@@ -1,0 +1,25 @@
+> Declare Variable
+    - $MyVariable 
+
+> Assign Value 
+    - $MyVariable = "Test
+
+> Get Value of Variable
+    - echo $MyVariable 
+    - $MyVariable
+
+> Assign Exist Method Return Values
+    - $process = Get-Process  
+
+> Get User Input
+    - $UserInput = Read-Host - Prompt "Please Enter Your Name:" 
+    - $UserInput = Read-Host "Please Enter Your Name:"
+    - echo $UserInput
+
+> Write to a File
+    - $UserInput > <file_path>
+
+> Write to a File 
+    - Set-Content -Value $<Variable_Name> -Path <file_path>
+
+>                  

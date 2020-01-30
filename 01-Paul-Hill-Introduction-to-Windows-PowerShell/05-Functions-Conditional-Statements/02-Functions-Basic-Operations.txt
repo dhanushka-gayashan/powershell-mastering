@@ -1,0 +1,34 @@
+> Define Function
+    Function EchoText {
+        echo "This is EchoText Function"
+    }
+    EchoText
+
+> Passing Arguments
+    Function EchoText {
+        echo $args
+    }
+    EchoText "This is argument"
+
+> Pass Multiple Arguments
+    Function EchoText {
+        echo ("Arguments:" + $args[0])
+    }
+    EchoText "This is argument 01" "This is argument 02" 
+
+> Define Parameters
+    Function EchoText {
+        param (
+            $AParam,
+            $BParam
+        )
+        echo ("Argument 01: " + $AParam)
+        echo ("Argument 02: " + $BParam)
+    }
+    EchoText -BParam "This is argument 02"  -AParam "This is argument 01" 
+
+    Function EchoText ($AParam, $BParam) {
+        echo ("Argument 01: " + $AParam)
+        echo ("Argument 02: " + $BParam)
+    }
+    EchoText -BParam "This is argument 02"  -AParam "This is argument 01" 
